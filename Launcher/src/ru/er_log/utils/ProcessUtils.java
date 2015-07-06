@@ -34,7 +34,7 @@ public class ProcessUtils {
             InputStream inputStream;
             if (isErrorStream) inputStream = process.getErrorStream();
             else inputStream = process.getInputStream();
-            InputStreamReader reader = new InputStreamReader(inputStream, System.getProperty("file.encoding"));
+            InputStreamReader reader = new InputStreamReader(inputStream, System.getProperty("sun.jnu.encoding"));
             BufferedReader buf = new BufferedReader(reader);
             String line = null;
             
